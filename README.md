@@ -4,7 +4,7 @@
     <h1>Server-to-server chats and private messages </h1>
 </div>
 
-### <a href="https://github.com/ilezzov-code/velochats"><img src="img/flags/ru.svg" width=15px> Выбрать русский README.md</a>
+### <a href="https://github.com/ilezzov-code/VeloChats/blob/main/README_RU.md"><img src="img/flags/ru.svg" width=15px> Выбрать русский README.md</a>
 
 ##  <a>Tables of Content</a>
 
