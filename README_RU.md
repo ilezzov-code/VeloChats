@@ -117,6 +117,7 @@ msg:
 Для поддержки звукового оформления, установить плагин на каждый Backend сервер.
 
 Вот как выглядит система упоминаний в игре:
+
 ![Mention](img/screens/mention.png)
 ![MentionHover](img/screens/mention_hover.png)
 
