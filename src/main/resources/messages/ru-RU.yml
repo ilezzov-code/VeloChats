@@ -1,0 +1,37 @@
+# Плагин поддерживает все виды форматирования сообщений.
+# LEGACY — Цвет через & / § и HEX через &#rrggbb / §#rrggbb или &x&r&r&g&g&b&b / §x§r§r§g§g§b§b
+# LEGACY_ADVANCED — Цвет и HEX через &##rrggbb / §##rrggbb
+# MINI_MESSAGE — Цвет через <цвет> Подробнее — https://docs.advntr.dev/minimessage/index.html
+# И все форматы доступные на https://www.birdflop.com/resources/rgb/
+# Вы можете использовать все форматы одновременно в одном сообщении. Плагин это поддерживает
+
+plugin:
+  prefix: "<gold>VersionBlocked <dark_gray>|" # Префикс плагина. Используйте %prefix% в сообщениях
+  prefix-error: "<red>VersionBlocked <dark_gray>|" # Префикс при ошибке. Используйте %prefix_error% в сообщениях
+  no-console: "%prefix_error% <gray>Эту команду могут использовать только игрока"
+  no-permission: "%prefix_error% <gray>У вас нет прав для выполнения этой команды"
+  reload: "%prefix% <gray>Плагин успешно &aперезагружен"
+  has-error-reload: "%prefix% <gray>Возникла ошибка при перезагрузке плагина: <red>%error%"
+  has-error: "%prefix% <gray>Возникла ошибка при выполнении команды O_o → <red>%error%"
+  has-error-check-version: "%prefix% <gray>Не удалось получить последнюю версию плагина"
+  use-latest-version: "%prefix% <gray>Вы используете последнюю <gray>версию плагина: <yellow>%latest_vers%"
+  use-outdated-version: "%prefix% <gray>Вы используете устаревшую версию плагина: <red>%current_vers% <red><bold>Запуск невозможен!</bold>\n<gray>Установите последнюю версию плагина: <yellow>%latest_vers% \n<gray>Скачать: <click:open_url:%download_link%><yellow>%download_link%"
+  use-supported-version: "%prefix% <gray>Вы используете поддерживаемую версию плагина <yellow>%current_vers%<gray>, но рекомундуем обновиться до последнедней <yellow>%latest_vers% \n<gray>Скачать: <click:open_url:%download_link%><yellow>%download_link%"
+  use-blacklist-version: "%prefix% <gray>Вы используете заблокированную версию плагина: <red>%current_vers% <red><bold>Запуск невозможен!</bold>\n<gray>Установите последнюю версию плагина: <yellow>%latest_vers% \n<gray>Скачать: <click:open_url:%download_link%><yellow>%download_link%"
+
+messages:
+  main-command: "%prefix% <gray>Использование: <yellow>/velochats reload <gray>— перезагрузить плагин"
+  player-not-found: "%prefix_error% <gray>Игрок <yellow>%target_nickname%</yellow> не найден. Возможно он не на сервере :("
+  cooldown: "%prefix_error% <gray>Подождите <yellow>%time% <gray>сек. перед следующим сообщением"
+  msg-help: "%prefix% <gray>Использование: <yellow>/%msg-command% <ник> <сообщение>"
+  write-yourself: "%prefix_error% <gray>Вы не можете написать самому себе"
+  reply-help: "%prefix% <gray>Использование: <yellow>/%reply-command% <сообщение>"
+  reply-not-found: "%prefix% <gray>Вам никто не писал в последнее время или отправитель вышел из сети"
+  spy-enable: "%prefix% <gray>Режим слежки включен"
+  spy-disable: "%prefix% <gray>Режим слежки выключен"
+  chat-help: "%prefix% <gray>Использование: <yellow>/%chat-command% <сообщение>"
+  chat-access-denied-for-sender: "%prefix_error% <gray>Вы не можете выполнить это действие, пока находитесь на сервере <yellow>%player_server%"
+  chat-access-denied-for-target: "%prefix_error% <gray>Вы не можете отправить сообщение этому игроку, пока он находится на сервере <yellow>%target_server%"
+  chat-permission-denied: "%prefix_error% <gray>Вы не можете писать в этот чат O_o"
+
+config-version: ${project.version}

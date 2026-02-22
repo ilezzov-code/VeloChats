@@ -1,0 +1,43 @@
+# Плагин поддерживает все виды форматирования сообщений.
+# The plugin supports all types of message formatting.
+# LEGACY — Цвет через & / § и HEX через &#rrggbb / §#rrggbb или &x&r&r&g&g&b&b / §x§r§r§g§g§b§b
+# LEGACY — Color via & / § and HEX via &#rrggbb / §#rrggbb or &x&r&r&g&g&b&b / §x§r§r§g§g§b§b
+# LEGACY_ADVANCED — Цвет и HEX через &##rrggbb / §##rrggbb
+# LEGACY_ADVANCED — Color and HEX via &##rrggbb / §##rrggbb
+# MINI_MESSAGE — Цвет через <цвет> Подробнее — https://docs.advntr.dev/minimessage/index.html
+# MINI_MESSAGE — Color via <color> Details — https://docs.advntr.dev/minimessage/index.html
+# И все форматы доступные на https://www.birdflop.com/resources/rgb/
+# And all formats available at https://www.birdflop.com/resources/rgb/
+# Вы можете использовать все форматы одновременно в одном сообщении. Плагин это поддерживает
+# You can use all formats simultaneously in one message. The plugin supports this.
+
+plugin:
+  prefix: "<gold>VersionBlocked <dark_gray>|" # Префикс плагина. Используйте %prefix% в сообщениях | Plugin prefix. Use %prefix% in messages
+  prefix-error: "<red>VersionBlocked <dark_gray>|" # Префикс при ошибке. Используйте %prefix_error% в сообщениях | Error prefix. Use %prefix_error% in messages
+  no-console: "%prefix_error% <gray>Only players can use this command"
+  no-permission: "%prefix_error% <gray>You do not have permission to execute this command"
+  reload: "%prefix% <gray>Plugin successfully &areloaded"
+  has-error-reload: "%prefix% <gray>An error occurred while reloading the plugin: <red>%error%"
+  has-error: "%prefix% <gray>An error occurred while executing the command O_o → <red>%error%"
+  has-error-check-version: "%prefix% <gray>Failed to retrieve the latest plugin version"
+  use-latest-version: "%prefix% <gray>You are using the latest <gray>plugin version: <yellow>%latest_vers%"
+  use-outdated-version: "%prefix% <gray>You are using an outdated plugin version: <red>%current_vers% <red><bold>Startup impossible!</bold>\n<gray>Install the latest plugin version: <yellow>%latest_vers% \n<gray>Download: <click:open_url:%download_link%><yellow>%download_link%"
+  use-supported-version: "%prefix% <gray>You are using a supported version <yellow>%current_vers%<gray>, but we recommend updating to the latest <yellow>%latest_vers% \n<gray>Download: <click:open_url:%download_link%><yellow>%download_link%"
+  use-blacklist-version: "%prefix% <gray>You are using a blacklisted plugin version: <red>%current_vers% <red><bold>Startup impossible!</bold>\n<gray>Install the latest plugin version: <yellow>%latest_vers% \n<gray>Download: <click:open_url:%download_link%><yellow>%download_link%"
+
+messages:
+  main-command: "%prefix% <gray>Usage: <yellow>/velochats reload <gray>— reload the plugin"
+  player-not-found: "%prefix_error% <gray>Player <yellow>%target_nickname%</yellow> not found. They might be offline :("
+  cooldown: "%prefix_error% <gray>Please wait <yellow>%time% <gray>sec. before the next message"
+  msg-help: "%prefix% <gray>Usage: <yellow>/%msg-command% <nickname> <message>"
+  write-yourself: "%prefix_error% <gray>You cannot message yourself"
+  reply-help: "%prefix% <gray>Usage: <yellow>/%reply-command% <message>"
+  reply-not-found: "%prefix% <gray>Nobody has messaged you recently or the sender has left the network"
+  spy-enable: "%prefix% <gray>Spy mode enabled"
+  spy-disable: "%prefix% <gray>Spy mode disabled"
+  chat-help: "%prefix% <gray>Usage: <yellow>/%chat-command% <message>"
+  chat-access-denied-for-sender: "%prefix_error% <gray>You cannot perform this action while on the server <yellow>%player_server%"
+  chat-access-denied-for-target: "%prefix_error% <gray>You cannot send a message to this player while they are on the server <yellow>%target_server%"
+  chat-permission-denied: "%prefix_error% <gray>You do not have permission to write in this chat O_o"
+
+config-version: ${project.version}
